@@ -26,7 +26,7 @@ Aqui será introduzido o "void main", responsável por abrir o código e o "void
    
   </a>
   
-Os arquivos CSV geralmente possuem uma primeira linha descritiva com os títulos das colunas (como "Nome, Idade, Sexo"). Esta etapa, utilizando a função fgets lê, mas não armazena as informações na estrutura de clientes, servindo exclusivamente para pular o cabeçalho e definir o tamanho da linha com "char linha".
+Os arquivos CSV geralmente possuem uma primeira linha descritiva com os títulos das colunas (como "Nome, Idade, Sexo"). Esta etapa, utilizando a função "fgets" lê, mas não armazena as informações na estrutura de clientes, servindo exclusivamente para pular o cabeçalho e definir o tamanho da linha com "char linha".
 
 ## 4 - Leitura do Arquivo e Separação de Dados
 
@@ -35,7 +35,7 @@ Os arquivos CSV geralmente possuem uma primeira linha descritiva com os títulos
    
   </a>
 
-Os "whiles" são utilizados com duas finalidades garantir que o código seja executado até percorrer todos os clientes e para repetir a ação de ler os caracteres e somados com o "i++" e "c++" - Salvam os caracteres e contam quais já foram lidos - são responsáveis por percorrer o arquivo e trazer suas informações para o código. Os "fgets" e "sizeof" são responsáveis por selecionar a linha a ser lida. Por fim, os "if (linha[i]) servem para ler se há alguma quebra na linha, sinalizado pela ',' e o "fclose" é para fechar o arquivo.
+Os "whiles" são utilizados com duas finalidades garantir que o código seja executado até percorrer todos os clientes e para repetir a ação de ler os caracteres e somados com o "i++" e "c++" - Salvam os caracteres e contam quais já foram lidos - são responsáveis por percorrer o arquivo e trazer suas informações para o código. Os "fgets" e "sizeof" são responsáveis por ler e selecionar - respectivamente - a linha a ser lida. Por fim, os "if (linha[i]) servem para ler se há alguma quebra na linha, sinalizado pela ',' e o "fclose" é para fechar o arquivo.
 
 ## 5 - Determinando Valores e Váriaveis
 
@@ -44,7 +44,7 @@ Os "whiles" são utilizados com duas finalidades garantir que o código seja exe
    
   </a>
 
-As váriaveis "si", "qm", "qf", "sim" e "sif" representam respectivamente a 'Soma das Idades', a 'Quantidade de Homens', a 'Quantidade de Mulheres', a 'Soma das Idades dos Homens" e 'Soma das Idades das Mulheres' estão definidas com valor '0' por base e os "%-25s %-5s %-4s" servem para selecionar os valores que serão utilizados de "nome", "idade" e "sexo" e o "for" vai servir - junto coma as outras variáveis com "++" para saber quais já foram utilizados - para escrever os dados em forma de tabela.
+As variáveis "si", "qm", "qf", "sim" e "sif" representam respectivamente a 'Soma das Idades', a 'Quantidade de Homens', a 'Quantidade de Mulheres', a 'Soma das Idades dos Homens" e 'Soma das Idades das Mulheres' estão definidas com valor '0' por base e os "%-25s %-5s %-4s" servem para selecionar os valores que serão utilizados de "nome", "idade" e "sexo" e o "for" vai servir - junto coma as outras variáveis com "++" para saber quais já foram utilizados - para escrever os dados em forma de tabela.
 
 ## 6 - Cálculos Finais
 
@@ -53,4 +53,13 @@ As váriaveis "si", "qm", "qf", "sim" e "sif" representam respectivamente a 'Som
    
   </a>
 
-O "float" foi utilizado para definir as últimas três váriaveis que suportam números com casas decimais, sendos elas a "media", "mediaf" e "mediam" que representam respectivamente as médias de idade geral, média de idade das mulheres e média de idade dos homens. As três linhas subsequentes servem para o cálculo do valor dessas váriaveis
+O "float" foi utilizado para definir as últimas três variáveis que suportam números com casas decimais, sendos elas a "media", "mediaf" e "mediam" que representam respectivamente as médias de idade geral, média de idade das mulheres e média de idade dos homens. As três linhas subsequentes servem para o cálculo do valor dessas variáveis considerando o cálculo da Média em Si.
+
+## 7 - Saída do Código
+
+<br />
+<div align="left">
+   
+  </a>
+
+As últimas linhas (com excessão do "}" que fecha o Código e o "getch();" que mantem o código aberto até ser finalizado) servem para imprimir os dados com suas informações e respectivas variáveis.
