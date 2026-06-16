@@ -88,20 +88,3 @@ void main() {
     printf("Média de Idade das Mulheres: %.1f anos\n", mediaf);
     getch();
 }
-
-
-
-
-
-// O arquivo a seguir contém dados de clientes. Você deve criar um programa em C que leia o arquivo, processe os dados e gere um relatório resumido dos clientes.
-//clientes.csv
-//Nome,Idade,Sexo
-//João da Silva,30,M
-//Maria Oliveira,25,F
-//Pedro Santos,35,M
-//Ana Costa,28,F
-//Carlos Lima,40,M
-//Maria Lima,40,F
-//Irene Lima,40,F
-//O programa deve ler os dados dos clientes, armazená-los em uma estrutura e exibir um relatório formatado na tela, mostrando o nome, a idade e o sexo de cada cliente, contar o total de clientes e
-//calcular a média de idade dos clientes, contar quantos são do sexo 'M' e quantos são do sexo 'F', também a média de idade por sexo.
