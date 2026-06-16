@@ -4,8 +4,7 @@ Explicações do Código
 ## 1 - Bibliotecas e Estrutura
 
 <br />
-<div align="center">
-  <a href="https://github.com/brolezebroleze/Hotel-Senai">
+<div align="left">
     <img src="Blibliotecas Estrutura.PNG" alt="Logo" width="200">
   </a>
 
