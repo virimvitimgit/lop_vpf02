@@ -44,6 +44,13 @@ Os "whiles" são utilizados com duas finalidades garantir que o código seja exe
    
   </a>
 
-As váriaveis "si", "qm", "qf", "sim" e "sif" representam respectivamente a 'Soma das Idades', a 'Quantidade de Homens', a 'Quantidade de Mulheres', a 'Soma das Idades dos Homens" e 'Soma das Idades das Mulheres' estão definidas com valor '0' por base e os "%-25s %-5s %-4s" servem para selecionar os valores que serão utilizados de "nome", "idade" e "sexo" e o "for" vai servir para - junto coma as outras variáveis com "++" - determinar o valor das variáveis.
+As váriaveis "si", "qm", "qf", "sim" e "sif" representam respectivamente a 'Soma das Idades', a 'Quantidade de Homens', a 'Quantidade de Mulheres', a 'Soma das Idades dos Homens" e 'Soma das Idades das Mulheres' estão definidas com valor '0' por base e os "%-25s %-5s %-4s" servem para selecionar os valores que serão utilizados de "nome", "idade" e "sexo" e o "for" vai servir - junto coma as outras variáveis com "++" para saber quais já foram utilizados - para escrever os dados em forma de tabela.
 
-## 6 - 
+## 6 - Cálculos Finais
+
+<br />
+<div align="left">
+   
+  </a>
+
+O "float" foi utilizado para definir as últimas três váriaveis que suportam números com casas decimais, sendos elas a "media", "mediaf" e "mediam" que representam respectivamente as médias de idade geral, média de idade das mulheres e média de idade dos homens. As três linhas subsequentes servem para o cálculo do valor dessas váriaveis
