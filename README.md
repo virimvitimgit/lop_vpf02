@@ -34,8 +34,16 @@ Aqui será introduzido o "void main", responsável por abrir o código e o "void
 
 ## 3 - Leitura do Cabeçalho e Definição
 
-![Imagem do Código](./Biblioteca.png).
-  
+```
+    char linha[256];
+    int tc = 0;
+    if(fgets(linha, sizeof(linha), arquivo) == NULL) {
+        printf("Arquivo inválido.\n");
+        fclose(arquivo);
+        return 1;
+    }
+```
+
 Os arquivos CSV geralmente possuem uma primeira linha descritiva com os títulos das colunas (como "Nome, Idade, Sexo"). Esta etapa, utilizando a função "fgets" lê, mas não armazena as informações na estrutura de clientes, servindo exclusivamente para pular o cabeçalho e definir o tamanho da linha com "char linha".
 
 ## 4 - Leitura do Arquivo e Separação de Dados
