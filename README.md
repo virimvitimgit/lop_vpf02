@@ -3,13 +3,32 @@ Explicações do Código
 
 ## 1 - Bibliotecas e Estrutura
 
-![Imagem do Código](./Biblioteca.png).
+```
+#include <stdio.h>
+#include <windows.h>
+#define MAX_CLIENTES 7
+
+struct Clientes{
+    char nome[50];
+    int idade;
+    char sexo;
+};
+```
 
 As linhas que começam com um "#" representam as bibliotecas que serão utilizadas - permitem a utilização das ferramentas essenciais para a criação desse código - e as outras linhas representam a estrutura que será utilizada como base para a produção do código
 
 ## 2 - Abertura do Código e Primeiras Configurações
 
-![Imagem do Código](./voidmain.png).
+```
+void main() {
+    SetConsoleOutputCP(CP_UTF8);
+    struct Clientes clientes[MAX_CLIENTES];
+    FILE * arquivo = fopen("clientes.csv", "r");
+    if(arquivo == NULL){
+        printf("Arquivo não encontrado.\n");
+        return 1;
+    }
+```
 
 Aqui será introduzido o "void main", responsável por abrir o código e o "void" é para que o código não precise de um retorno para precisar se manter. Também será introduzida a estrutura com o "struct", a abertura do arquivo com "FILE", seguido pelo "*" que serve como um "ponteiro" para apontar para o arquivo e o que acontece caso o arquivo não seja encontrado com o "if".
 
