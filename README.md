@@ -5,7 +5,7 @@ Explicações do Código
 
 <br />
 <div align="left">
-    ![Bibliotecas]("Bibliotecas.PNG")
+   <img src="Bibliotecas.PNG" alt="Bibliotecas" width="50">
   </a>
 
 As linhas que começam com um "#" representam as bibliotecas que serão utilizadas - permitem a utilização das ferramentas essenciais para a criação desse código - e as outras linhas representam a estrutura que será utilizada como base para a produção do código
