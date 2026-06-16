@@ -9,3 +9,5 @@ Explicações do Código
   </a>
 
 As linhas que começam com um "#" representam as bibliotecas que serão utilizadas - permitem a utilização das ferramentas essenciais para a criação desse código - e as outras linhas representam a estrutura que será utilizada como base para a produção do código
+
+## 2 - Abertura do Código
