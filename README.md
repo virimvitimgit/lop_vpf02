@@ -48,24 +48,92 @@ Os arquivos CSV geralmente possuem uma primeira linha descritiva com os títulos
 
 ## 4 - Leitura do Arquivo e Separação de Dados
 
-![Imagem do Código](./Biblioteca.png).
+```
+    while(fgets(linha, sizeof(linha), arquivo) != NULL && tc < MAX_CLIENTES) {
+        int i = 0;
+        int c = 0;
+        while (linha[i] != ',' && linha[i] != '\0' && c < 49) {
+            clientes[tc].nome[c] = linha[i];
+            i++;
+            c++;
+        }
+        clientes[tc].nome[c] = '\0';
+        if (linha[i] == ',') i++;
+        char idade_str[10];
+        c = 0;
+        while (linha[i] != ',' && linha[i] != '\0' && c < 9) {
+            idade_str[c] = linha[i];
+            i++;
+            c++;
+        }
+        idade_str[c] = '\0';
+        int valor = 0, j = 0;
+        while (idade_str[j] != '\0') {
+            valor = (valor * 10) + (idade_str[j] - '0');
+            j++;
+        }
+        clientes[tc].idade = valor;
+        if (linha[i] == ',') i++;
+        if (linha[i] != '\0' && linha[i] != '\n' && linha[i] != '\r') {
+            clientes[tc].sexo = linha[i];
+            tc++;
+        }
+    }
+    fclose(arquivo);
+```
 
 Os "whiles" são utilizados com duas finalidades garantir que o código seja executado até percorrer todos os clientes e para repetir a ação de ler os caracteres e somados com o "i++" e "c++" - Salvam os caracteres e contam quais já foram lidos - são responsáveis por percorrer o arquivo e trazer suas informações para o código. Os "fgets" e "sizeof" são responsáveis por ler e selecionar - respectivamente - a linha a ser lida. Por fim, os "if (linha[i]) servem para ler se há alguma quebra na linha, sinalizado pela ',' e o "fclose" é para fechar o arquivo.
 
 ## 5 - Determinando Valores e Váriaveis
 
-![Imagem do Código](./Biblioteca.png).
-
+```
+ int si = 0;
+    int qm = 0;
+    int qf = 0;
+    int sim = 0;
+    int sif = 0;
+    printf("\n\n");
+    printf("%-25s  %-5s  %-4s\n", "Nome", "Idade", "Sexo");
+    printf("\n\n");
+    for(int i = 0; i < tc; i++) {
+        printf("%-25s  %-5d  %-4c\n", clientes[i].nome, clientes[i].idade, clientes[i].sexo);
+        si += clientes[i].idade;
+        if (clientes[i].sexo == 'M') {
+            qm++;
+            sim += clientes[i].idade;
+        } else if (clientes[i].sexo == 'F') {
+            qf++;
+            sif += clientes[i].idade;
+        }
+    }
+```
 As variáveis "si", "qm", "qf", "sim" e "sif" representam respectivamente a 'Soma das Idades', a 'Quantidade de Homens', a 'Quantidade de Mulheres', a 'Soma das Idades dos Homens" e 'Soma das Idades das Mulheres' estão definidas com valor '0' por base e os "%-25s %-5s %-4s" servem para selecionar os valores que serão utilizados de "nome", "idade" e "sexo" e o "for" vai servir - junto coma as outras variáveis com "++" para saber quais já foram utilizados - para escrever os dados em forma de tabela.
 
 ## 6 - Cálculos Finais
 
-![Imagem do Código](./Biblioteca.png).
+```
+ float media, mediam, mediaf;
+    media = (float)si / tc;
+    mediam = (float)sim / qm;
+    mediaf = (float)sif / qf;
+```
 
 O "float" foi utilizado para definir as últimas três variáveis que suportam números com casas decimais, sendos elas a "media", "mediaf" e "mediam" que representam respectivamente as médias de idade geral, média de idade das mulheres e média de idade dos homens. As três linhas subsequentes servem para o cálculo do valor dessas variáveis considerando o cálculo da Média em Si.
 
 ## 7 - Saída do Código
 
-![Imagem do Código](./Biblioteca.png).
+```
+printf("\n\n");
+    printf("Total de Clientes: %d\n", tc);
+    printf("Média de Idade de Ambos os Sexos: %.1f anos\n", media);
+    printf("\n\n");
+    printf("Quantidade de Homens (M): %d\n", qm);
+    printf("Média de Idade dos Homens: %.1f anos\n", mediam);
+    printf("\n\n");
+    printf("Quantidade de Mulheres (F): %d\n", qf);
+    printf("Média de Idade das Mulheres: %.1f anos\n", mediaf);
+    getch();
+}
+```
 
 As últimas linhas (com excessão do "}" que fecha o Código e o "getch();" que mantem o código aberto até ser finalizado) servem para imprimir os dados com suas informações e respectivas variáveis.
